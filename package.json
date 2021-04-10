@@ -1,0 +1,28 @@
+{
+  "name": "copious-little-searcher",
+  "version": "0.1.0",
+  "description": "A small Search Server for finding assets pubished on a particular blog",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/copious-world/copious-little-searcher.git"
+  },
+  "keywords": [
+    "Simplified",
+    "tiny",
+    "search",
+    "engine"
+  ],
+  "author": "R. Leddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/copious-world/copious-little-searcher/issues"
+  },
+  "homepage": "https://github.com/copious-world/copious-little-searcher#readme"
+}
