@@ -1,58 +1,5 @@
 let {QueryResult,Searching} = require('../lib/searching.js')
-
-
-function uuid() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-       var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-       return v.toString(16);
-    });
- }
-
-function sleeper(secs) {
-    return new Promise((resolve,reject) => {
-        setTimeout(() => { resolve(secs) },secs*1000)
-    })
-}
-
-let g_passes = {}
-let g_fails = {}
-
-// FROM STACK EXCHANGE
-Object.defineProperty(global, '__stack', {
-    get: function() {
-            var orig = Error.prepareStackTrace;
-            Error.prepareStackTrace = function(_, stack) {
-                return stack;
-            };
-            var err = new Error;
-            Error.captureStackTrace(err, arguments.callee);
-            var stack = err.stack;
-            Error.prepareStackTrace = orig;
-            return stack;
-        }
-    });
-    
-    Object.defineProperty(global, '__line', {
-    get: function() {
-            return __stack[1].getLineNumber();
-        }
-    });
-    
-    Object.defineProperty(global, '__function', {
-    get: function() {
-            return __stack[1].getFunctionName();
-        }
-});
-    
-function qnd_assert(bval,func) {
-    if ( g_passes[func] === undefined ) {
-        g_passes[func] = 0
-        g_fails[func] = 0
-    }
-
-    g_passes[func] += bval ? 1 : 0
-    g_fails[func] += bval ? 0 : 1
-}
+let {uuid,sleeper,qnd_assert,dump_test_results} = require('./helpers.js')
 
 
 
@@ -274,12 +221,8 @@ if ( require.main.filename === __filename ) {
     //
     (async () => {
         await all_tests_this_module()
-        //
-        console.log("PASSES:")
-        console.dir(g_passes)
-        console.log("FAILS:")
-        console.dir(g_fails)
-    
+        console.log("test_searching")
+        dump_test_results()    
     })()
     //
 }
