@@ -10,9 +10,9 @@ This module is called a `little` searcher because it is intentionally a small am
 
 This module provides configurable search behavior with a simplistic default solution. In the default case, this module provides searching and object management on small lists of objects stored in JavaScript data structures. 
 
-In the configured varieties, this provide a proxy interface to anything that will implement the interface. (The `anything` here might be a data center.) It provides some data management on results in order to marshal them to the clients such as browsers looking for types of entries. So, the final array of results will be finally produced by this module and be returned from the method `get_seach`.
+In the configured varieties, this provide a proxy interface to anything that will implement the interface. (The `anything` here might be a data center.) It provides some data management on results in order to marshal them to the clients such as browsers looking for types of entries. So, the final array of results will be finally produced by this module and be returned from the method `get_search`.
 
-This module can also be used as a data manager class within another application. It can retrieve specific entries or a set of fuzzy matches as needed. It is in some sense a container with fuzzy searching features.
+This module can also be used as a data manager class within another application. It can retrieve specific entries or a set of fuzzy matches as needed. It is in some sense a container with possible fuzzy searching features, where the fuzzy features are provided by applications implementing `good_match` and `score_match`.
 
 ## install
 
