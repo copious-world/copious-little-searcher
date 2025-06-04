@@ -2,7 +2,7 @@ const {DirWatcherHandler,ObjFileDirLoader,FileLists} = require('copious-registry
 //
 const SearchesByUser = require('./lib/single_owner_searches');
 const {Searching} = require('./lib/searching')
-const {QueryResult} = require('./lib/defaut_queries')
+const {QueryResult} = require('./lib/default_queries')
 //
 module.exports.DirWatcherHandler = DirWatcherHandler
 module.exports.ObjFileDirLoader = ObjFileDirLoader

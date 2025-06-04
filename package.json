@@ -1,6 +1,6 @@
 {
   "name": "copious-little-searcher",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "A small Search Server for finding assets pubished on a particular blog",
   "main": "index.js",
   "directories": {
