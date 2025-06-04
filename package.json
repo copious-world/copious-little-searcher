@@ -1,6 +1,6 @@
 {
   "name": "copious-little-searcher",
-  "version": "0.5.9",
+  "version": "0.6.1",
   "description": "A small Search Server for finding assets pubished on a particular blog",
   "main": "index.js",
   "directories": {
@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/copious-world/copious-little-searcher#readme",
   "dependencies": {
-    "copious-registry": "^0.5.8"
+    "copious-registry": "^0.5.9"
   }
 }
